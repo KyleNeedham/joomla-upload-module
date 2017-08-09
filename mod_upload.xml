@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.7.0" client="site" method="upgrade">
+    <name>mod_upload</name>
+    <author>WebOD LTD</author>
+    <version>1.0.0</version>
+    <description>Joomla! upload module for your Joomla! site.</description>
+    <files>
+        <folder>tmpl</folder>
+
+        <filename>mod_upload.xml</filename>
+        <filename module="mod_upload">mod_upload.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <config>
+
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field
+                        name="title"
+                        type="text"
+                        label="Title:"
+                        default="Upload Files"/>
+
+                <field
+                        name="url"
+                        type="text"
+                        label="Upload URL:"
+                        default=""/>
+
+                <field
+                        name="file_field"
+                        type="text"
+                        label="File field:"
+                        default=""/>
+
+            </fieldset>
+        </fields>
+
+
+    </config>
+</extension>
