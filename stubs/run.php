@@ -15,9 +15,9 @@ $content = ob_get_clean();
 <html>
 <head>
     <title>Test Runner for Joomla! upload module.</title>
-<?php JFactory::getDocument()->renderHead(); ?>
+    <script src="/js/uploader.js"></script>
 </head>
 <body>
-<?php echo $content; ?>
+<?php echo str_repeat($content, isset($repeat) ? $repeat : 1); ?>
 </body>
 </html>

@@ -10,7 +10,7 @@ namespace {
 
     class JDocumentHtml
     {
-        public function renderHead()
+        public function addScript($url, $type = 'text/javascript', $defer = false, $async = false)
         {
         }
     }
