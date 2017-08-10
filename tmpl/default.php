@@ -6,19 +6,21 @@
  * file that was distributed with this source code.
  */
 
-/** @var \Joomla\Registry\Registry $params */
+/** @var string $title */
+/** @var string $url */
+/** @var string $fileField */
 
 ?>
 
 
 <div class="mod-upload card card-default">
     <div class="card-header">
-        <span class="upload-title"><?php echo $params->get('title'); ?></span>
+        <span class="upload-title"><?php echo $title; ?></span>
     </div>
     <div class="card-block">
         <div class="mod-upload-file-inputs"
-            data-mod-upload-url="<?php echo $params->get('url'); ?>"
-            data-mod-upload-field-name="<?php echo $params->get('file_field', 'file'); ?>"
+            data-mod-upload-url="<?php echo $url; ?>"
+            data-mod-upload-field-name="<?php echo $fileField; ?>"
         ></div>
     </div>
 </div>
