@@ -43,10 +43,23 @@ function initModUploader() {
     }
 
     function uploadFile(file, progressBar) {
-        debugger;
-        var req = new XMLHttpRequest({
+        var req = new XMLHttpRequest({});
+        var formData = new FormData();
+        formData.append(this.fieldName, file);
 
-        });
+        req.addEventListener('progress', function(e) {
+            var done = e.position || e.loaded, total = e.totalSize || e.total;
+            progressBar(Math.floor(done/total*1000)/10);
+        }, false);
+
+        req.onreadystatechange = function(e) {
+            if (4 === this.readyState) {
+                progressBar(100);
+            }
+        };
+
+        req.open('post', this.url, true);
+        req.send(formData);
     }
 
     function onFileSelected(e) {
