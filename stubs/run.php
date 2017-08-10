@@ -6,6 +6,10 @@
  * file that was distributed with this source code.
  */
 
+if (! isset($repeat)) {
+    $repeat = 1;
+}
+
 ob_start();
 require __DIR__ . '/../mod_upload.php';
 $content = ob_get_clean();
