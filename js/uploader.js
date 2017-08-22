@@ -47,7 +47,7 @@ function initModUploader() {
         var formData = new FormData();
         formData.append(this.fieldName, file);
 
-        req.addEventListener('progress', function(e) {
+        req.upload.addEventListener('progress', function(e) {
             var done = e.position || e.loaded, total = e.totalSize || e.total;
             progressBar(Math.floor(done/total*1000)/10);
         }, false);
