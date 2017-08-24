@@ -17,28 +17,25 @@ $content = ob_get_clean();
 ?>
 <!doctype html>
 <html>
-<head>
-    <title>Test Runner for Joomla! upload module.</title>
-    <script src="/js/uploader.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css">
-</head>
-<body>
+    <head>
+        <title>Test Runner for Joomla! upload module.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="/js/uploader.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" type="text/css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-faded">
+            <h1 class="navbar-brand mb-0">Joomla! module for uploads.</h1>
+        </nav>
 
-<nav class="navbar navbar-light bg-faded">
-    <h1 class="navbar-brand mb-0">Joomla! module for uploads.</h1>
-</nav>
-
-<div style="height: 100px;"></div>
-
+        <div class="container">
+            <div class="row">
 <?php for ($i = 0; $i < $repeat; $i++): ?>
-
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <?php echo $content; ?>
-        </div>
-    </div>
-    <div style="height: 25px;"></div>
-
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <?php echo $content; ?>
+                </div>
 <?php endfor; ?>
-</body>
+            </div>
+        </div>
+    </body>
 </html>
