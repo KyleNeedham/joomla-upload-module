@@ -13,14 +13,14 @@
 ?>
 
 
-<div class="mod-upload card card-default">
+<div class="mod-upload-container card card-default" data-mod-upload>
     <div class="card-header">
-        <span class="upload-title"><?php echo $title; ?></span>
+        <span class="mod-upload-title"><?php echo $title; ?></span>
     </div>
-    <div class="card-block">
-        <div class="mod-upload-file-inputs"
-            data-mod-upload-url="<?php echo $url; ?>"
-            data-mod-upload-field-name="<?php echo $fileField; ?>"
-        ></div>
+    <div class="mod-upload-body card-body" data-mod-progress>
+        <label class="mod-upload-btn btn btn-outline-success">
+            Upload
+            <input data-mod-upload-url="<?php echo $url; ?>" name="<?php echo $fileField; ?>" type="file" multiple hidden>
+        </label>
     </div>
 </div>
