@@ -20,7 +20,7 @@
     <div class="mod-upload-body card-body" data-mod-progress>
         <label class="mod-upload-btn btn btn-outline-success">
             Upload
-            <input data-mod-input data-mod-upload-url="<?php echo $url; ?>" name="<?php echo $fileField; ?>" type="file" multiple hidden>
+            <input name="<?php echo $fileField; ?>" data-mod-input data-mod-upload-url="<?php echo $url; ?>" type="file" multiple hidden>
         </label>
     </div>
 </div>

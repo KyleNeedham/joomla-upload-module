@@ -20,6 +20,6 @@ final class UploadContainerAttributesTest extends TestCase
         $content = $this->getContentWithParams(new Registry($params));
 
         static::assertContains('data-mod-upload-url="' . $params['url'] . '"', $content);
-        static::assertContains('data-mod-upload-field-name="' . $params['file_field'] . '"', $content);
+        static::assertContains('<input name="' . $params['file_field'] . '"', $content);
     }
 }
